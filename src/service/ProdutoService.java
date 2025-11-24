@@ -21,6 +21,9 @@ public class ProdutoService {
 
     public void listar(){
         System.out.println("-PRODUTOS-");
+        if(repository.Listar().isEmpty()){
+            System.out.println("Nenhum item cadastrado");
+        }
         repository.Listar().forEach(System.out::println);
     }
 
