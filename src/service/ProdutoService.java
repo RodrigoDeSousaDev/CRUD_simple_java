@@ -35,5 +35,11 @@ public class ProdutoService {
         System.out.println("Produto atualizado");
     }
 
-
+    public void remover(int id){
+        if(repository.remover(id)){
+            System.out.println("produto removido");
+        }else{
+            System.out.println("Produto nao encontrado");
+        }
+    }
 }
