@@ -24,5 +24,16 @@ public class ProdutoService {
         repository.Listar().forEach(System.out::println);
     }
 
+    public void atualizar(int id, String novoNome, double novoPreco){
+        Produto p = repository.buscarPorId(id);
+        if(p == null){
+            System.out.println("Produto não encontrado!");
+            return;
+        }
+        p.setNome(novoNome);
+        p.setPreco(novoPreco);
+        System.out.println("Produto atualizado");
+    }
+
 
 }
