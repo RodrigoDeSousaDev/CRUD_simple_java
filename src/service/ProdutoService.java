@@ -19,4 +19,10 @@ public class ProdutoService {
         System.out.println("Produto cadastrado com sucesso");
     }
 
+    public void listar(){
+        System.out.println("-PRODUTOS-");
+        repository.Listar().forEach(System.out::println);
+    }
+
+
 }
